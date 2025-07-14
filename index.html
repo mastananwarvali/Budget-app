@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Budget Tracker</h1>
+    <div id="balance">Balance: ₹0</div>
+
+    <form id="transaction-form">
+      <input type="text" id="description" placeholder="Description" required />
+      <input type="number" id="amount" placeholder="Amount (+/-)" required />
+      <select id="category">
+        <option value="income">Income</option>
+        <option value="expense" selected>Expense</option>
+        <option value="regular">Regular</option> <!-- New -->
+      </select>
+
+      <button type="submit">Add Transaction</button>
+    </form>
+
+    <h2>Transactions</h2>
+    <ul id="transactions"></ul>
+
+    <h2>Regular Transactions</h2>
+    <ul id="regular-transactions"></ul>
+
+
+    <h2>Expense Chart</h2>
+    <canvas id="expenseChart"></canvas>
+  </div>
+
+  <script src="chart.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
